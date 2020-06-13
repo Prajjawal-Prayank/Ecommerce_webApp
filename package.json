@@ -2,7 +2,7 @@
     "scripts": {
         "client": "cd ecommerce-frontend && npm start",
         "server": "cd ecommerce && npm start",
-        "start": "npm run server && npm run client\""
+        "start": "npm run server && npm run client"
         },
     "engines": {
         "node": "11.6.0"
