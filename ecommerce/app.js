@@ -18,7 +18,8 @@ const orderRoutes=require('./routes/order');
 
 //express
 const app=express();
-
+//for using in heroku
+app.use('/', express.static(path.join(__dirname, '/client/build')));
 
 //db    
 //for connecting to local database, use :- process.env.DATABASE
