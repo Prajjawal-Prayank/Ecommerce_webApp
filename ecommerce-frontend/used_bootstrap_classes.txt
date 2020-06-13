@@ -1,0 +1,34 @@
+This is a list of all the bootstrap classNames used in this project:-
+form-group
+text-muted
+form-control
+btn btn-outline-primary
+row
+col-md-8 offset-md-2
+mb-3
+btn btn-secondary
+alert alert-success
+alert alert-info
+alert alert-danger
+lead
+
+
+col-4 mb-3
+card
+card-header
+card-body
+mt-2 mb-2
+
+form-check-input
+form-check-label
+
+to show everything in same line :-
+span tag with "input-group-text"
+inside this tag:- div tags with "input-group-prepend"
+                                "input-group input-group-lg"
+
+
+list-group-item 
+d-flex 
+justify-content-between 
+align-tems-center                                
