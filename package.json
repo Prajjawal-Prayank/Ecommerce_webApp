@@ -2,9 +2,12 @@
     "scripts": {
         "client": "cd ecommerce-frontend && npm start",
         "server": "cd ecommerce && npm start",
-        "start": "npm run server && npm run client"
+        "start": "concurrently \"npm run server\" \"npm run client\""
         },
     "engines": {
         "node": "11.6.0"
-        }    
+        } ,
+    "dependencies":{
+        "concurrently":"^5.2.0"
+    }       
 }
