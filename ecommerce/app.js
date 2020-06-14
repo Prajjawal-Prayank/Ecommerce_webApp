@@ -25,7 +25,7 @@ const path = require('path');
     app.use(express.static(path.join(__dirname,'../ecommerce-frontend/build')));
   //  }
 
-
+//latest removal..1st line
 //app.use('/api', express.static(path.join(__dirname, '../ecommerce-frontend/build')));
 //app.use('*', express.static(path.join(__dirname,'../ecommerce-frontend/build')));
 
@@ -65,6 +65,11 @@ app.use(expressValidator());
 app.use(cors());                            //helps in communicating b/w requests over different ports
 app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'DELETE, PUT, GET, POST');
+    res.header(
+    'Access-Control-Allow-Headers',
+    'Origin, X-Requested-With, Content-Type, Accept'
+    );
     next();
   });
 
@@ -81,8 +86,13 @@ const port=process.env.PORT || 8000         //8000 is just to make sure that app
                                             
 
 //trying to host on heroku
-app.get("/api/*", (req, res) => {
+app.get("/*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "../ecommerce-frontend/build"));
+});
+
+//latest addition
+app.get('*', (request, response) => {
+	response.sendFile(path.join(__dirname, '../ecommerce-frontend/build', 'index.html'));
 });
 
 app.listen(port,()=>{
