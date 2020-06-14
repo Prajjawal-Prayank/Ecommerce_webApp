@@ -14,7 +14,7 @@ const Home=()=>  {
 
     const loadProductsBySell=()=>{
         getProducts('sold')
-        .then(data=>{
+        .then(data=>{   console.log("data-");console.log(data);
             if(data.error){
                 setError(data.error);
             }
