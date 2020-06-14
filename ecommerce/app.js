@@ -63,7 +63,10 @@ app.use(bodyParser.json());                 //ensures that we get json data from
 app.use(cookieParser());
 app.use(expressValidator());
 app.use(cors());                            //helps in communicating b/w requests over different ports
-
+app.use(function (req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    next();
+  });
 
 //routes middleware
 app.use('/api', authRoutes);                //all the routes mentioned in authRoutes are mounted on '/api'
