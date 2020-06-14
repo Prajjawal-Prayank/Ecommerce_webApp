@@ -26,8 +26,8 @@ const path = require('path');
   //  }
 
 
-app.use('/api', express.static(path.join(__dirname, '../ecommerce-frontend/build')));
-//app.use('*', express.static(path.join(__dirname, "ecommerce-frontend", "src")))
+//app.use('/api', express.static(path.join(__dirname, '../ecommerce-frontend/build')));
+//app.use('*', express.static(path.join(__dirname,'../ecommerce-frontend/build')));
 
 
 
