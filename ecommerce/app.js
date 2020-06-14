@@ -19,8 +19,19 @@ const orderRoutes=require('./routes/order');
 //express
 const app=express();
 //for using in heroku
-const path = require('path');
-app.use('/', express.static(path.join(__dirname, '../ecommerce-frontend/public')));
+const path = require('path'); 
+
+//if (process.env.NODE_ENV === "production") {
+    app.use(express.static(path.join(__dirname,'../ecommerce-frontend/build')));
+  //  }
+
+
+app.use('/api', express.static(path.join(__dirname, '../ecommerce-frontend/build')));
+//app.use('*', express.static(path.join(__dirname, "ecommerce-frontend", "src")))
+
+
+
+
 
 //db    
 //for connecting to local database, use :- process.env.DATABASE
@@ -66,8 +77,13 @@ const port=process.env.PORT || 8000         //8000 is just to make sure that app
                                             //.env is not available/accessible for some reason
                                             
 
+//trying to host on heroku
+app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "../ecommerce-frontend/build"));
+});
+
 app.listen(port,()=>{
-    console.log(`Server running on port ${port}`);
+    console.log(`Server running on port ${port}`);  
 });                                            
                                          
                                             
