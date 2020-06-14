@@ -36,7 +36,7 @@ app.use('/api', express.static(path.join(__dirname, '../ecommerce-frontend/build
 //db    
 //for connecting to local database, use :- process.env.DATABASE
 //for now..test database is connected. We need to connect to E-commerce
-mongoose.connect(process.env.ATLAS_DATABASE,{
+mongoose.connect(process.env.MONGODB_URI,{
     useNewUrlParser: true,  //avoids deprecation warning of connect(). The MongoDB Node.js driver rewrote the 
                             //tool it uses to parse MongoDB connection strings. Because this is such a big 
                             //change, they put the new connection string parser behind a flag. 
