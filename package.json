@@ -1,6 +1,6 @@
 {
     "scripts": {
-        "client": "cd ecommerce-frontend && npm start",
+        "client": "cd ecommerce-frontend && npm start server.js",
         "server": "cd ecommerce && npm start",
         "start": "npm run server"
         },

@@ -78,7 +78,7 @@ const port=process.env.PORT || 8000         //8000 is just to make sure that app
                                             
 
 //trying to host on heroku
-app.get("*", (req, res) => {
+app.get("/api/*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "../ecommerce-frontend/build"));
 });
 

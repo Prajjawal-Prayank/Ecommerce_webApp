@@ -116,7 +116,7 @@ const Card=({showAddToCart=true,showRemoveProductButton=false,cartUpdate=false,
                 <div className="card-body " style={myStyle}>
                     {shouldRedirect(redirect)}
                 <center>
-                    <div className="d-flex" style={{width:"100%",height:"100%",maxWidth:"300px",maxHeight:"200px",minHeight:"200px",minWidth:"300px",position:"relative"}}>
+                    <div className="d-flex" style={{width:"100%",height:"100%",maxWidth:"200px",maxHeight:"200px",minHeight:"200px",minWidth:"200px",position:"relative"}}>
                         <ShowImage item={product} url="product" /> 
                     </div>
                 </center>    
